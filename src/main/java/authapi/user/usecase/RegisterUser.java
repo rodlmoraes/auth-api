@@ -1,9 +1,12 @@
 package authapi.user.usecase;
 
+import authapi.global.UseCase;
 import authapi.user.domain.User;
 import authapi.user.usecase.exception.EmailAlreadyRegistered;
 import authapi.user.usecase.port.UserRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RegisterUser implements UseCase<RegisterUser.Input, RegisterUser.Output> {
     private final UserRepository repository;
 
